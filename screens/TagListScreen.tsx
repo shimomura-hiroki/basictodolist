@@ -1,0 +1,31 @@
+import React, { VFC } from 'react';
+import tw from 'tailwind-rn';
+import {
+    View,
+    SafeAreaView,
+    Text,
+    TouchableOpacity,
+    FlatList,
+    ActivityIndicator,
+} from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import { auth } from '../firebaseConfig';
+import { selectUser, logout } from '../slices/userSlice';
+import { IconButton } from '../components/IconButton';
+
+export const TagListScreen =() => {
+    const user = useSelector(selectUser);
+    const dispatch = useDispatch();
+    const signOut = async() => {
+        dispatch(logout());
+    } catch {
+        Alert.alert('Logout error');
+    }
+    return (
+        <SafeAreaView style={tw('flex-1 mt-5 items-center')}>
+            <text>(user.email)</text>
+            <IconButton name="logout" size={20} color="blue" onPress={signOut} />
+        </SafeAreaView>
+    );
+};
+
