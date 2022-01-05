@@ -1,8 +1,9 @@
-import React, { VFC } from 'react';
+import React from 'react';
 import tw from 'tailwind-rn';
 import {
     View,
     SafeAreaView,
+    Alert,
     Text,
     TouchableOpacity,
     FlatList,
@@ -13,17 +14,20 @@ import { auth } from '../firebaseConfig';
 import { selectUser, logout } from '../slices/userSlice';
 import { IconButton } from '../components/IconButton';
 
-export const TagListScreen =() => {
+export const TagListScreen = () => {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
     const signOut = async() => {
+    try {
+        await auth.signOut();
         dispatch(logout());
-    } catch {
-        Alert.alert('Logout error');
-    }
+        } catch {
+            Alert.alert('Logout error');
+        }
+    };
     return (
         <SafeAreaView style={tw('flex-1 mt-5 items-center')}>
-            <text>(user.email)</text>
+            <Text>(user.email)</Text>
             <IconButton name="logout" size={20} color="blue" onPress={signOut} />
         </SafeAreaView>
     );
