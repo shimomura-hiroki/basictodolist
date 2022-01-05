@@ -26,7 +26,7 @@ export const useFirebaseAuth = () => {
     const register = async () => {
         try {
             if (email !== '' && password !== '') {
-                await signInWithEmailAndPassword(auth, email, password);
+                await createUserWithEmailAndPassword(auth, email, password);
             }
         } catch (err: any){
             setAuthErr(err.message);
