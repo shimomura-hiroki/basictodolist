@@ -6,4 +6,5 @@
     export type RootStackParamList = {
         Auth: undefined;
         TagList: undefined;
+        CreateTag: undefined;
     };

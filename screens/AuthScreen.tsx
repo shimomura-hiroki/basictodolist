@@ -20,7 +20,7 @@ export const AuthScreen: VFC = () => {
         toggleMode,
     } =useFirebaseAuth();
     return(
-        <SafeAreaView style={[tw('flex-1 pt-16 items-center'), {backgroundColor: '#008b8b' }]}>
+        <SafeAreaView style={[tw('flex-1 pt-16 items-center'), {backgroundColor: '#ff6347' }]}>
             <FontAwesome name="tasks" size={50} color="white" />
             <Text style={tw('text-2xl text-white font-semibold mt-2 m-5')}>
                 {isLogin ? 'Login' : 'Signup'}
