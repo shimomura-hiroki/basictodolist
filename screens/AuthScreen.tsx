@@ -36,7 +36,7 @@ export const AuthScreen: VFC = () => {
             />
             <InputField
                 leftIcon="lock"
-                placeholder="Enter passsword"
+                placeholder="Enter password"
                 secureTextEntry
                 textContentType="password"
                 value={password}
