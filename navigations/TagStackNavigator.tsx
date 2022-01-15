@@ -9,6 +9,7 @@ import { selectUser, logout } from '../slices/userSlice';
 import { TagListScreen } from '../screens/TagListScreen';
 import { CreateTagScreen } from '../screens/CreateTagScreen';
 import { IconButton } from '../components/IconButton';
+import  { TaskStackNavigator } from './TaskStackNavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -47,6 +48,7 @@ export const TagStackNavigator: VFC = () => {
                 }}
             >
                 <Stack.Screen name="TagList" component={TagListScreen} />
+                <Stack.Screen name="TaskStack" component={TaskStackNavigator} />
             </Stack.Group>
             <Stack.Group
                 screenOptions={{
