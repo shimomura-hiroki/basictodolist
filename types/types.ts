@@ -22,5 +22,7 @@
         CreateTag: undefined;
         TaskList: undefined;
         TaskStack: undefined;
+        CreateTask: undefined;
+        EditTask: undefined;
     };
 
