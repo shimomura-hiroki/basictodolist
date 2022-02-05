@@ -24,16 +24,13 @@ export default {
       "buildNumber": "1.0.0"
     },
     "android": {
+      "package": "creationstack.second.BasicTodoList",
+      "versionCode": 1,
+      "permissions": [],
       "adaptiveIcon": {
-        "package": "creationstack.second.BasicTodoList",
-        "versionCode": 1,
-        "permissions": [],
         "foregroundImage": "./assets/icon_adaptive_foreground.png",
         "backgroundImage": "./assets/icon_adaptive_background.png"
       }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     },
     extra: {
       apiKey: process.env.API_KEY,
