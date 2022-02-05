@@ -2,14 +2,14 @@ import 'dotenv/config';
 
 export default {
   "expo": {
-    "name": "basictodolist",
-    "slug": "basictodolist",
+    "name": "BasicTodoList",
+    "slug": "BasicTodoList",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -19,12 +19,17 @@ export default {
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "creationstack.second.BasicTodoList",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "package": "creationstack.second.BasicTodoList",
+        "versionCode": 1,
+        "permissions": [],
+        "foregroundImage": "./assets/icon_adaptive_foreground.png",
+        "backgroundImage": "./assets/icon_adaptive_background.png"
       }
     },
     "web": {
