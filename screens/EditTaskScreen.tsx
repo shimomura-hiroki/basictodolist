@@ -47,7 +47,7 @@ export const EditTaskScreen: VFC<Props> = ({ navigation }) => {
             onChangeText={(txt: string) => onChangeTask(txt)}
         />
     </View>
-    <IconButton name="edit" size={20} color="gray" onPress={updateTask} />
+    <IconButton name="edit" size={40} color="gray" onPress={updateTask} />
     {updateErr !== '' && (
         <Text style={tw('text-red-500 my-3 font-semibold')}>{updateErr}</Text>
         )}

@@ -47,7 +47,7 @@ export const CreateTaskScreen: VFC<Props> = ({ navigation }) => {
             onChangeText={(txt: string) => onChangeTask(txt)}
             />
         </View>
-        <IconButton name="plus" size={20} color="gray" onPress={createTask} />
+        <IconButton name="plus" size={40} color="gray" onPress={createTask} />
         {createErr !== '' && (
             <Text style={tw('text-red-500 my-3 font-semibold')}>{createErr}</Text>
         )}

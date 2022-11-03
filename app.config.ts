@@ -5,6 +5,7 @@ export default {
     "name": "BasicTodoList",
     "slug": "BasicTodoList",
     "version": "1.0.0",
+    "privacy": "unlisted",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -25,11 +26,26 @@ export default {
     },
     "android": {
       "package": "creationstack.second.BasicTodoList",
-      "versionCode": 1,
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 2,
       "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon_adaptive_foreground.png",
         "backgroundImage": "./assets/icon_adaptive_background.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png",
+      "config": {
+        "firebase": {
+          apiKey: "AIzaSyCEKeMcQQtAxI1L6ai_AtM8ZQrKJWtaqvg",
+          authDomain: "basictodolist-4b2b4.firebaseapp.com",
+          projectId: "basictodolist-4b2b4",
+          storageBucket: "basictodolist-4b2b4.appspot.com",
+          messagingSenderId: "147427468386",
+          appId: "1:147427468386:web:674271d82c46b441dc9d3b",
+          measurementId: "G-GWX34C8PMB"
+        }
       }
     },
     extra: {

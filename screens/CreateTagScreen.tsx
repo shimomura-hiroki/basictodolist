@@ -21,7 +21,7 @@ export const CreateTagScreen: VFC<Props> =({ navigation }) => {
         <SafeAreaView style={tw('flex-1 bg-gray-100 items-center')}>
             <View style={tw('flex-row px-4 justify-between w-full')}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <AntDesign name="close" size={25} color="gray" />
+                    <AntDesign name="close" size={50} color="gray" />
                 </TouchableOpacity>
                 <View />
             </View>
@@ -33,7 +33,7 @@ export const CreateTagScreen: VFC<Props> =({ navigation }) => {
                 value={name}
                 onChangeText={(text: string) => setName(text)}
                 />
-                <IconButton name="plus" size={20} color="gray" onPress={createTag} />
+                <IconButton name="plus" size={40} color="gray" onPress={createTag} />
                 {createErr !== '' && (
                     <Text style={tw('text-red-500 my-3 font-semibold')}>{createErr}</Text>
                 )}
